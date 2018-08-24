@@ -1,0 +1,13 @@
+<ul>
+      {%for album in all_albums%}
+    <li> <a href="/naat/{{album.id}}/"> {{album.album_title}} {{album.id}}</a> </li>
+
+     {% for song in album.song_set.all %}
+        <li>{{song.song_title}} {{song.file_type}}</li>
+    {%endfor%}
+    {%endfor%}
+
+    {% for x in fruits %}
+        <li>{{x}} {{x}}</li>
+    {%endfor%}
+</ul>

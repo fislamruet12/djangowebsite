@@ -1,0 +1,305 @@
+
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from d29u17ylf1ylz9.cloudfront.net/educat-preview/educat/product-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Aug 2018 20:53:34 GMT -->
+<head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Product Details || Naat</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+  {% load staticfiles %}
+
+		<!-- Bootstrap CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'naat/css/bootstrap.min.css' %}">
+
+		<!-- Color Swithcer CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'naat/css/color-switcher.css' %}">
+
+		<!-- Fontawsome CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'naat/css/font-awesome.min.css' %}">
+
+
+        <link rel="stylesheet" href="{% static 'naat/css/booss/owl.carousel.css' %}">
+
+		<!-- jquery-ui CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'naat/css/jquery-ui.css' %}">
+
+		<!-- Meanmenu CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'naat/css/meanmenu.min.css' %}">
+
+		<!-- Animate CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'naat/css/animate.css' %}">
+
+		<!-- Animated Headlines CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'naat/css/animated-headlines.css' %}">
+
+        <!-- Nivo slider CSS
+		============================================ -->
+		<link rel="stylesheet" href="{%static 'naat/lib/nivo-slider/css/nivo-slider.css' %}" type="text/css" />
+		<link rel="stylesheet" href="{%static 'naat/lib/nivo-slider/css/preview.css'  %}" type="text/css" media="screen" />
+
+		<!-- Metarial Iconic Font CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'naat/css/material-design-iconic-font.css' %}">
+        <link rel="stylesheet" href="{static 'naat/css/material-design-iconic-font.min.css' %}">
+
+		<!-- Slick CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'naat/css/slick.css' %}">
+
+
+
+		<!-- Style CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'style.css' %}">
+
+		<!-- Color CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'naat/css/color.css' %}">
+
+		<!-- Responsive CSS
+		============================================ -->
+        <link rel="stylesheet" href="{%static 'naat/css/responsive.css' %}">
+
+		<!-- Modernizr JS
+		============================================ -->
+       <script src="{%static 'naat/js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+           </head>
+    <body>
+                <div class="header-top">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-7 col-md-6 col-sm-5 hidden-xs">
+                                    <span>Have any question? +968 547856 254</span>
+                                </div>
+                                <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12">
+                                    <div class="header-top-right">
+                                        <div class="content"><a href="#"><i class="zmdi zmdi-account"></i> My Account</a>
+                                            <ul class="account-dropdown">
+                                                <li><a href="#">My Account</a></li>
+                                                <li><a href="#">Log In</a></li>
+                                                <li><a href="#">Register</a></li>
+                                                <li><a href="#">Blog</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="content"><a href="#"><i class="zmdi zmdi-favorite"></i> Wishlist</a></div>
+                                        <div class="content"><a href="#"><i class="zmdi zmdi-shopping-basket"></i> Chechout</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                <!--End of Breadcrumb Banner Area-->
+                <!--Product Details Area Start-->
+                <div class="product-details-area section-top-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="product-details-image">
+                                    <img src="{%static 'naat/img/details/3.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="product-details-content">
+                                    <form action="/naat/{{album.id}}/" method="post">
+                                        <h2>{{album_sp.album_title}}</h2>
+                                        <div class="product-name-rating">
+                                            <h5>{{album_sp.artist}}</h5>
+                                            <div class="single-item-rating">
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star-half"></i>
+                                           </div>
+                                        </div>
+                                        <p>There are many variations of passages of Lorepsumavable, but the majority have suffered alteration in some form, by injected humour, </p>
+                                        <div class="qty">
+                                            <span>Qty {{album_sp.id}}</span>
+                                            <input type="text" name="qty" id="qty" maxlength="12" value="2" class="input-text qty">
+                                         <ul>
+                                             {% for song in album_sp.song_set.all %}
+                                           <li>{{song.song_title}}----{{song.file_type}}</li>
+                                             {%endfor%}
+                                       </ul>
+                                        </div>
+
+                                        <button type="button" class="button-default">ADD TO CART</button>
+                                        <h1 class="p-price">$60</h1>
+                                        <span>Share this product</span>
+                                        <div class="social-links">
+                                            <a href="#"><i class="zmdi zmdi-facebook"></i></a>
+                                            <a href="#"><i class="zmdi zmdi-twitter"></i></a>
+                                            <a href="#"><i class="zmdi zmdi-google-old"></i></a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End of Product Details Area-->
+                                            <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                <!--Online Product Area Start-->
+                <div class="product-area section-padding">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title-wrapper">
+                                    <div class="section-title">
+                                        <h3>Related Product</h3>
+                                        <p>There are many variations of passages</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                      {% for x in fruits %}
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4">
+                                <div class="single-product-item">
+                                    <div class="single-product-image">
+                                        <a href="#"><img src="{%static 'naat/img/details/3.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="single-product-text">
+                                        <h4><a href="/naat/1/">Title Product Here 1</a></h4>
+                                        <h5>Book</h5>
+                                        <div class="product-price">
+                                            <h3>$ 28</h3>
+                                           <div class="single-item-rating">
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star-half"></i>
+                                           </div>
+                                        </div>
+                                        <div class="product-buttons">
+                                            <button type="button" class="button-default cart-btn">ADD TO CART</button>
+                                            <button type="button" class="button-default"><i class="zmdi zmdi-favorite"></i></button>
+                                            <button type="button" class="button-default"><i class="zmdi zmdi-refresh-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+<!--
+                            <div class="col-md-3 col-sm-4">
+                                <div class="single-product-item">
+                                    <div class="single-product-image" width="200px">
+                                        <a href="#" ><img src="{%static 'naat/img/details/4.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="single-product-text">
+                                        <h4><a href="/naat/2/">Title Product Here 2</a></h4>
+                                        <h5>Book</h5>
+                                        <div class="product-price">
+                                            <h3>$ 28</h3>
+                                           <div class="single-item-rating">
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star-half"></i>
+                                           </div>
+                                        </div>
+                                        <div class="product-buttons">
+                                            <button type="button" class="button-default cart-btn">ADD TO CART</button>
+                                            <button type="button" class="button-default"><i class="zmdi zmdi-favorite"></i></button>
+                                            <button type="button" class="button-default"><i class="zmdi zmdi-refresh-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-4">
+                                <div class="single-product-item">
+                                    <div class="single-product-image">
+                                        <a href="#"><img src="{%static 'naat/img/product/3.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="single-product-text">
+                                        <h4><a href="/naat/3/">Title Product Here 3</a></h4>
+                                        <h5>Book</h5>
+                                        <div class="product-price">
+                                            <h3>$ 28</h3>
+                                           <div class="single-item-rating">
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star-half"></i>
+                                           </div>
+                                        </div>
+                                        <div class="product-buttons">
+                                            <button type="button" class="button-default cart-btn">ADD TO CART</button>
+                                            <button type="button" class="button-default"><i class="zmdi zmdi-favorite"></i></button>
+                                            <button type="button" class="button-default"><i class="zmdi zmdi-refresh-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div
+
+                            <div class="col-md-3 col-sm-4">
+                                <div class="single-product-item">
+                                    <div class="single-product-image">
+                                        <a href="#"><img src="{%static 'naat/img/product/1.jpg' %}" alt=""></a>
+                                    </div>
+                                    <div class="single-product-text">
+                                        <h4><a href="/naat/1/">Title Product Here 4</a></h4>
+                                        <h5>Book</h5>
+                                        <div class="product-price">
+                                            <h3>$ 28</h3>
+                                           <div class="single-item-rating">
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star"></i>
+                                               <i class="zmdi zmdi-star-half"></i>
+                                           </div>
+                                        </div>
+                                        <div class="product-buttons">
+                                            <button type="button" class="button-default cart-btn">ADD TO CART</button>
+                                            <button type="button" class="button-default"><i class="zmdi zmdi-favorite"></i></button>
+                                            <button type="button" class="button-default"><i class="zmdi zmdi-refresh-alt"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       -->
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="pagination-content number">
+                                    <ul class="pagination">
+                                        <li><a href="#"><i class="zmdi zmdi-chevron-left"></i></a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li class="current"><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    </body>
+
+<!-- Mirrored from d29u17ylf1ylz9.cloudfront.net/educat-preview/educat/product-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Aug 2018 20:53:35 GMT -->
+</html>
